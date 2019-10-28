@@ -2,15 +2,16 @@
 
 int A[1000000],n;
 
+//二分搜索
 int binarySearch(int key){
 	int left=0;
 	int right=n;
 	int mid;
 	while(left<right){
 		mid=(left+right)/2;
-		if(key==A[mid]) return 1;
-		if(key>A[mid]) left=mid+1;
-		else if(key<A[mid]) right=mid;
+		if(key==A[mid]) return 1;  //发现key
+		if(key>A[mid]) left=mid+1;  //搜索后半部分
+		else if(key<A[mid]) right=mid;  //搜索前半部分
 	}
 	return 0;
 }

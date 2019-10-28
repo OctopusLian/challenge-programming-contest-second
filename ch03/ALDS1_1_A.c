@@ -1,14 +1,20 @@
+/*
+	
+Insertion Sort
+
+*/
+
 #include<stdio.h>
-void trace(int A[],int N){  //°´Ë³ĞòÊä³öÊı×éÔªËØ 
+void trace(int A[],int N){  //æŒ‰é¡ºåºè¾“å‡ºæ•°ç»„å…ƒç´ 
 	int i;
 	for(i=0;i<N;i++){
-		if(i>0) printf(" ");  //ÔÚÏàÁÚÔªËØÖ®¼äÊä³ö1¸ö¿Õ¸ñ 
+		if(i>0) printf(" ");  //åœ¨ç›¸é‚»å…ƒç´ ä¹‹é—´è¾“å‡º1ä¸ªç©ºæ ¼
 		printf("%d",A[i]);
 	}
 	printf("\n");
 }
 
-void insertionSort(int A[],int N){  //²åÈëÅÅĞò£¨Êı×éÏÂ±ê´Ó0¿ªÊ¼£© 
+void insertionSort(int A[],int N){  //æ’å…¥æ’åº(0èµ·ç‚¹æ•°ç»„)
 	int j,i,v;
 	for(i=1;i<N;i++){
 		v=A[i];

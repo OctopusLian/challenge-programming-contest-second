@@ -5,12 +5,12 @@
 int top,S[1000];
 
 void push(int x){
-	S[++top] = x;  //top¼Ó1Ö®ºó½«ÔªËØ²åÈëtopËùÖ¸µÄÎ»ÖÃ 
+	S[++top] = x;  //topåŠ 1ä¹‹åå°†å…ƒç´ æ’å…¥topæ‰€æŒ‡çš„ä½ç½®
 }
 
 int pop(){
 	top--;
-	return S[top + 1];  //·µ»ØtopËùÖ¸µÄÔªËØ 
+	return S[top + 1];  //è¿”å›topæ‰€æŒ‡çš„å…ƒç´ 
 }
 
 int main()

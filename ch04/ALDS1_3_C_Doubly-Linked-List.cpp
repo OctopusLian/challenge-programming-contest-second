@@ -12,7 +12,7 @@ Node *nil;
 Node* ListSearch(int key){
 	Node *cur = nil->next;
 	while(cur != nil && cur->key != key){
-		cur = cur->key;
+		cur = cur->next;
 	} 
 	return cur;
 }
@@ -51,12 +51,14 @@ void deleteLast(){
 }
 
 void deleteKey(int key){
+	//删除搜索到的结点
 	deleteNode(listSearch(key));
 }
 
 void insert(int key){
 	Node *x = (Node *)malloc(sizeof(Node));
 	x->key = key;
+	//在头结点后添加元素
 	x->next = nil->next;
 	nil->next->prev = x;
 	nil->next = x;
@@ -70,7 +72,7 @@ int main(){
 	int np = 0,nd = 0;
 	scanf("%d",&n);
 	init();
-	for(i = 0;i < n;i++){
+	for(i = 0;i < n;i++){  //使用效率更高的输入函数
 		scanf("%s%d",com,&key);
 		if(com[0] == 'i')
 		{

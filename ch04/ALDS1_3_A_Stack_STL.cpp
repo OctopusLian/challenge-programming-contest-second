@@ -1,3 +1,8 @@
+/*
+ALDS1_3_A_Stack STL实现
+
+*/
+
 #include<iostream>
 #include<cstdlib>
 #include<stack>
